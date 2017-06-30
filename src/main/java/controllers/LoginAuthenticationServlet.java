@@ -1,6 +1,6 @@
-package Controllers;
+package controllers;
 
-import DAO.ValidateUser;
+import dao.ValidateUser;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,7 +25,9 @@ public class LoginAuthenticationServlet extends HttpServlet {
             RequestDispatcher nextPage=request.getRequestDispatcher("blog.jsp");
             nextPage.forward(request,response);
         }else{
-            out.write("INVALID USER");
+            RequestDispatcher errPage=request.getRequestDispatcher("index.jsp");
+            out.println("Sorry Wrong username or password");
+            errPage.include(request,response);
         }
 
     }

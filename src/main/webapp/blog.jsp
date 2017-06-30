@@ -7,7 +7,7 @@
 <body>
 <h2>Hello ${sessionScope.uname}</h2>
 <h3 style="text-align: center">ENTER BLOG</h3>
-<form method="post" action="/login">
+<form method="post" action="validblog">
     <table>
         <tr>
             <td>Enter Blog Id</td>

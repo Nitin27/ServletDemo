@@ -11,10 +11,23 @@
     
     <servlet>
         <servlet-name>LoginController</servlet-name>
-        <servlet-class>Controllers.LoginAuthenticationServlet</servlet-class>
+        <servlet-class>controllers.LoginAuthenticationServlet</servlet-class>
     </servlet>
+
+
+    <servlet>
+        <servlet-name>validateBlogServlet</servlet-name>
+        <servlet-class>controllers.validateBlogServlet</servlet-class>
+    </servlet>
+
+
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>validateBlogServlet</servlet-name>
+        <url-pattern>/validblog</url-pattern>
     </servlet-mapping>
 </web-app>
