@@ -1,5 +1,4 @@
 package controllers;
-
 import dao.ValidateBlog;
 
 import javax.servlet.RequestDispatcher;
@@ -13,6 +12,7 @@ import java.io.PrintWriter;
 public class validateBlogServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out=response.getWriter();
+        response.setContentType("text/html");
         Integer blogId=Integer.parseInt(request.getParameter("txtID"));
         String blog=request.getParameter("txtBlog");
         ValidateBlog isValid=new ValidateBlog();
