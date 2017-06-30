@@ -44,5 +44,4 @@ public class ValidateUser {
         }
         return hasRecord;
     }
-
 }
